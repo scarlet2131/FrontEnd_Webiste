@@ -7,7 +7,6 @@ body, html {
     background: linear-gradient(to right, #a1ffce, #faffd1); /* Light gradient background */
 }
 
-/* Header Styles */
 header {
     background-color: #4CAF50; /* Green color for the header */
     color: white;
@@ -32,75 +31,30 @@ nav ul li a {
     font-size: 20px;
 }
 
-/* Profile Image */
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ddd;
-    background-image: url('path/to/your-image.jpg'); /* Add your image path here */
-    background-size: cover; /* Cover the entire area of the div */
-    margin: 20px auto;
-}
-
-/* Section Styles */
-section {
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Section Headings */
-section h2 {
-    color: #333; /* Darker text color for visibility */
-    background-color: #e7ffe7; /* Light green background for headings */
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/* Introduction Section */
-#intro {
-    margin: 20px 0;
-}
-
-/* Ensure full page width */
-header, .profile-image, section {
-    width: 100%;
-    box-sizing: border-box;
-}
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #a1ffce, #faffd1); /* Light gradient background */
-}
-
-/* Header Styles */
-header {
-    background-color: #4CAF50; /* Green color for the header */
-    color: white;
-    padding: 10px 0;
+/* Increase Navbar Width and Improve Styles */
+nav ul li {
+    display: inline-block; /* Changed from inline to inline-block */
+    margin: 0 25px; /* Increased spacing */
+    padding: 1px 15px; /* New padding for a bigger look */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    display: inline-block; /* Make the nav container fit its content */
+    padding: 10px 0; /* Increased padding */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
-nav ul li a {
+/* Footer Styles */
+footer {
+    background-color: #4CAF50; /* Matching the header color */
     color: white;
-    text-decoration: none;
-    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px; /* Ensures there's space before the footer */
 }
 
 /* Profile Image */
@@ -109,7 +63,7 @@ nav ul li a {
     height: 150px;
     border-radius: 50%;
     background-color: #ddd;
-    background-image: url('profile.jpg'); /* Add your image path here */
+    background-image: url('../profile.jpg'); /* Add your image path here */
     background-size: cover; /* Cover the entire area of the div */
     margin: 20px auto;
 }
@@ -130,10 +84,6 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* Introduction Section */
-#intro {
-    margin: 20px 0;
-}
 /* Timeline Styles for Skills and Experience */
 .timeline {
     position: relative;
@@ -175,10 +125,33 @@ section h2 {
 }
 
 
-/* Ensure full page width */
-header, section {
-    width: 100%;
-    box-sizing: border-box;
+
+
+
+
+
+/* Continue using your existing styles, and add these for the new structure */
+
+.details {
+    display: none;
 }
 
+/* When a details section becomes the target, display it */
+:target {
+    display: block;
+    background-color: #f0f0f0; /* Add some styling */
+    padding: 10px;
+    border-left: 4px solid #4CAF50; /* A touch to indicate active section */
+    margin: 10px 0px; /* Space it out a bit from other content */
+}
 
+/* Style the links for a better look */
+.timeline a {
+    color: #4CAF50; /* Green, to match your theme */
+    text-decoration: none; /* Optional, depending on your preference */
+    font-weight: bold; /* Make it stand out */
+}
+
+.timeline a:hover {
+    text-decoration: underline; /* Indicate clickable */
+}
