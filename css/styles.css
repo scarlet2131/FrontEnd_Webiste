@@ -1,0 +1,184 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a1ffce, #faffd1); /* Light gradient background */
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green color for the header */
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ddd;
+    background-image: url('path/to/your-image.jpg'); /* Add your image path here */
+    background-size: cover; /* Cover the entire area of the div */
+    margin: 20px auto;
+}
+
+/* Section Styles */
+section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Section Headings */
+section h2 {
+    color: #333; /* Darker text color for visibility */
+    background-color: #e7ffe7; /* Light green background for headings */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Introduction Section */
+#intro {
+    margin: 20px 0;
+}
+
+/* Ensure full page width */
+header, .profile-image, section {
+    width: 100%;
+    box-sizing: border-box;
+}
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a1ffce, #faffd1); /* Light gradient background */
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green color for the header */
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ddd;
+    background-image: url('profile.jpg'); /* Add your image path here */
+    background-size: cover; /* Cover the entire area of the div */
+    margin: 20px auto;
+}
+
+/* Section Styles */
+section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Section Headings */
+section h2 {
+    color: #333; /* Darker text color for visibility */
+    background-color: #e7ffe7; /* Light green background for headings */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Introduction Section */
+#intro {
+    margin: 20px 0;
+}
+/* Timeline Styles for Skills and Experience */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #4CAF50;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left-side, .right-side {
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.left-side {
+    left: 0;
+}
+
+.right-side {
+    left: 50%;
+}
+
+.left-side p, .right-side p {
+    padding: 10px;
+    background-color: #e7ffe7;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+/* Ensure full page width */
+header, section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
