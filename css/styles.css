@@ -304,3 +304,29 @@ section h2 {
         max-width: 95%; /* More width on smaller screens for better use of space */
     }
 }
+
+/* Keyframe animation for profile info box */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0); /* Start position: no translation */
+    }
+    50% {
+        transform: translateX(-20px); /* Middle position: translate left by 20px */
+    }
+    100% {
+        transform: translateX(20px); /* End position: translate right by 20px */
+    }
+}
+
+/* Apply animation to profile info box */
+#intro {
+    animation: moveLeftRight 2s ease infinite; /* Apply the keyframe animation */
+}
+
+/* Change text color of all h5 elements */
+h5 {
+    color: #285943; /* Darker green color */
+}
+p{
+    text-align: center;
+}
