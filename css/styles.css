@@ -4,11 +4,11 @@ body, html {
     padding: 0;
     width: 100%;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #a1ffce, #faffd1); /* Light gradient background */
+    background: linear-gradient(to right, #a1ffce, #faffd1);
 }
 
 header {
-    background-color: #4CAF50; /* Green color for the header */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 0;
 }
@@ -33,14 +33,9 @@ nav ul li a {
 
 /* Increase Navbar Width and Improve Styles */
 nav ul li {
-    display: inline-block; /* Changed from inline to inline-block */
-    margin: 0 25px; /* Increased spacing */
-    padding: 1px 15px; /* New padding for a bigger look */
-}
-
-nav ul {
-    display: inline-block; /* Make the nav container fit its content */
-    padding: 10px 0; /* Increased padding */
+    display: inline-block;
+    margin: 0 25px;
+    padding: 1px 15px;
 }
 
 /* Smooth Scrolling */
@@ -50,11 +45,11 @@ html {
 
 /* Footer Styles */
 footer {
-    background-color: #4CAF50; /* Matching the header color */
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px; /* Ensures there's space before the footer */
+    margin-top: 20px;
 }
 
 /* Profile Image */
@@ -64,40 +59,21 @@ footer {
     border-radius: 50%;
     background-color: #ddd;
     background-image: url('../profile.jpg'); /* Add your image path here */
-    background-size: cover; /* Cover the entire area of the div */
     margin: 20px auto;
+    background-size: cover;
 }
-
-
-
 
 /* Introduction Section */
 #intro {
-    max-width: 700px; /* Increased width for a broader box */
-    margin: 0 auto 40px; /* Adjusted bottom margin for spacing */
-    padding: 30px; /* Increased padding for more space inside */
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 30px;
     text-align: center;
-    background-color: #DCF6EA; /* Light background for contrast */
-    border-radius: 15px; /* More pronounced rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    background-color: #DCF6EA;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
-
-#intro h1 {
-    margin-bottom: 20px; /* Increased space between the heading and paragraph */
-    color: #4CAF50; /* A green that matches the header for consistency */
-}
-
-#intro p {
-    font-size: 18px; /* Slightly larger font size for readability */
-    line-height: 1.7; /* Enhanced line height for better text flow */
-    color: #555; /* Darker grey for improved readability */
-}
-
-
-
-
-
 
 /* Section Styles */
 section {
@@ -107,8 +83,8 @@ section {
 
 /* Section Headings */
 section h2 {
-    color: #333; /* Darker text color for visibility */
-    background-color: #e7ffe7; /* Light green background for headings */
+    color: #333;
+    background-color: #e7ffe7;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -118,8 +94,11 @@ section h2 {
 /* Timeline Styles for Skills and Experience */
 .timeline {
     position: relative;
-    max-width: 600px;
+    max-width: 960px;
     margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Align boxes left and right */
 }
 
 .timeline::after {
@@ -130,35 +109,157 @@ section h2 {
     top: 0;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 0; /* Ensure line doesn't cover boxes */
+}
+
+/* Skill Box Styles */
+.skill-box {
+    width: calc(50% - 40px); /* Adjust width for spacing */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Hide overflow for smooth hover effect */
+    cursor: pointer;
+    z-index: 1; /* Ensure boxes are clickable */
+}
+
+.skill-box h5 {
+    margin-bottom: 10px; /* Space between title and content */
+}
+
+.skill-box p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* Smooth transition for content reveal */
+}
+
+.skill-box:hover p {
+    max-height: 200px; /* Adjust based on content size */
+}
+
+@media screen and (max-width: 768px) {
+    .timeline, .skill-box {
+        width: 100%; /* Full width for smaller screens */
+        max-width: none;
+    }
+    .timeline::after {
+        display: none; /* Remove central line on smaller screens */
+    }
+}
+
+
+/* Existing CSS up to the .timeline::after styles remains unchanged */
+
+/* Adjusted Skill Box Styles for Left and Right Alignment */
+.skill-box {
+    width: calc(50% - 40px); /* Adjust width for spacing */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .left-side, .right-side {
     position: relative;
-    width: 50%;
-    padding: 10px;
-    text-align: left;
+    text-align: center; /* Center text within boxes */
 }
 
+/* Ensuring alternate alignment of skill boxes */
 .left-side {
-    left: -5%;
+    float: left;
+    clear: both;
+    margin-left: -5%; /* Adjust as needed for spacing from the center line */
 }
 
 .right-side {
-    left: 52%;
+    float: right;
+    clear: both;
+    margin-left: 55%; /* Adjust as needed for spacing from the center line */
 }
 
-.left-side p, .right-side p {
-    padding: 10px;
-    background-color: #e7ffe7;
-    display: inline-block;
+.skill-box h5 {
+    margin: 0;
+    padding-bottom: 10px; /* Space above the hidden paragraph */
+}
+
+.skill-box p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.skill-box:hover p {
+    max-height: 100px; /* Adjust based on content to reveal; use a larger value if needed */
+}
+
+/* Additional styles for the central line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #4CAF50;
+    z-index: 1; /* Ensure it's visible between the skill boxes */
+}
+
+@media screen and (max-width: 768px) {
+    .left-side, .right-side {
+        float: none;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .timeline::after {
+        display: none; /* Hide central line on smaller screens */
+    }
+}
+
+
+
+/* Adjustments specific to the experience boxes */
+.experience-box.left, .experience-box.right {
+    width: calc(50% - 40px); /* Adjust width for spacing */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Hide overflow for smooth hover effect */
+    transition: all 0.3s ease;
 }
 
+.experience-box.left {
+    float: left;
+    margin-left: -5%; /* Adjust spacing from the center */
+}
 
+.experience-box.right {
+    float: right;
+    margin-left: 55%; /* Adjust spacing from the center */
+}
 
+.experience-box h5 {
+    margin-bottom: 10px; /* Space between title and content */
+}
 
+.experience-box p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* Smooth transition for content reveal */
+    text-align: left; /* Align text to the left */
+}
 
-
-
-
+.experience-box:hover p {
+    max-height: 200px; /* Adjust based on content size */
+}
