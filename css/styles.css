@@ -68,6 +68,37 @@ footer {
     margin: 20px auto;
 }
 
+
+
+
+/* Introduction Section */
+#intro {
+    max-width: 700px; /* Increased width for a broader box */
+    margin: 0 auto 40px; /* Adjusted bottom margin for spacing */
+    padding: 30px; /* Increased padding for more space inside */
+    text-align: center;
+    background-color: #DCF6EA; /* Light background for contrast */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+}
+
+#intro h1 {
+    margin-bottom: 20px; /* Increased space between the heading and paragraph */
+    color: #4CAF50; /* A green that matches the header for consistency */
+}
+
+#intro p {
+    font-size: 18px; /* Slightly larger font size for readability */
+    line-height: 1.7; /* Enhanced line height for better text flow */
+    color: #555; /* Darker grey for improved readability */
+}
+
+
+
+
+
+
 /* Section Styles */
 section {
     text-align: center;
@@ -106,15 +137,15 @@ section h2 {
     position: relative;
     width: 50%;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .left-side {
-    left: 0;
+    left: -5%;
 }
 
 .right-side {
-    left: 50%;
+    left: 52%;
 }
 
 .left-side p, .right-side p {
@@ -130,28 +161,4 @@ section h2 {
 
 
 
-/* Continue using your existing styles, and add these for the new structure */
 
-.details {
-    display: none;
-}
-
-/* When a details section becomes the target, display it */
-:target {
-    display: block;
-    background-color: #f0f0f0; /* Add some styling */
-    padding: 10px;
-    border-left: 4px solid #4CAF50; /* A touch to indicate active section */
-    margin: 10px 0px; /* Space it out a bit from other content */
-}
-
-/* Style the links for a better look */
-.timeline a {
-    color: #4CAF50; /* Green, to match your theme */
-    text-decoration: none; /* Optional, depending on your preference */
-    font-weight: bold; /* Make it stand out */
-}
-
-.timeline a:hover {
-    text-decoration: underline; /* Indicate clickable */
-}
