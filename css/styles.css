@@ -329,4 +329,35 @@ h5 {
 }
 p{
     text-align: center;
+    color: grey;
+}
+
+/* Fun animation for all sections */
+section {
+    animation: slideInFromLeft 1s ease both;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Border styles for skill boxes */
+.skill-box {
+    border: 2px solid #B3F0B3; /* Blue border */
+}
+
+/* Border styles for experience boxes */
+.experience-box {
+    border: 2px solid #B3F0B3; /* Blue border */
+}
+
+/* Border styles for profile info box */
+#contact {
+    border: 2px solid #B3F0B3; /* Blue border */
 }
