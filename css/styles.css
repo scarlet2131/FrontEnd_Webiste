@@ -361,3 +361,54 @@ section {
 #contact {
     border: 2px solid #B3F0B3; /* Blue border */
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info, .company-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2, .company-info h2 {
+    margin-top: 0;
+}
+
+.contact-info p, .company-info p {
+    margin: 5px 0;
+}
+
+.letter-content {
+    text-align: justify;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
